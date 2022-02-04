@@ -78,7 +78,7 @@ WSGI_APPLICATION = "cars.wsgi.application"
 DATABASES = {
     "default": {
         "ENGINE": "django.db.backends.postgresql",
-        "HOST": "db",
+        "HOST": os.environ.get("POSTGRES_HOST", "db"),
         "NAME": os.environ.get("POSTGRES_DB", "postgres"),
         "PORT": 5432,
         "USER": os.environ.get("POSTGRES_USER", "postgres"),
