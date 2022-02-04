@@ -23,10 +23,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = os.environ.get("SECRET_KEY", "")
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = os.environ.get('DEBUG', 'true') == 'true'
+DEBUG = os.environ.get("DEBUG", "true") == "true"
 
 ALLOWED_HOSTS = []
-host = os.environ.get('ALLOWED_HOST')
+host = os.environ.get("ALLOWED_HOST")
 if host is not None:
     ALLOWED_HOSTS.append(host)
 
