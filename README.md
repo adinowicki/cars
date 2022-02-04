@@ -1,11 +1,11 @@
-#Cars app
+# Cars app
 
-##Set up
+## Set up
 
 Copy `postgres.env.example` to `postgres.env`, `django.env.example` to `django.env`,
 change it as You wish, and run `make`.
 
-##Make rules
+## Make rules
 
 `make`
 
