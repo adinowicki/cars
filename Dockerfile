@@ -4,5 +4,5 @@ RUN apt-get install -y --no-install-recommends \
     build-essential \
     libpq-dev
 WORKDIR /app
-COPY requirements.txt .
+COPY . .
 RUN python3 -m pip install -r requirements.txt
