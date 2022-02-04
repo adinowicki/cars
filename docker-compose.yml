@@ -1,0 +1,21 @@
+volumes:
+  postgres_data: {}
+
+services:
+  web:
+    build: .
+    depends_on:
+      - db
+    volumes:
+      - .:/app
+    env_file:
+      - django.env
+      - postgres.env
+    ports:
+      - "8000:8000"
+  db:
+    image: postgres:13
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    env_file:
+      - postgres.env

@@ -1,0 +1,5 @@
+[tool.black]
+line-length = 79
+
+[tools.isort]
+src_paths = ["car", "car_app"]
